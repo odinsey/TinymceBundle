@@ -11,6 +11,9 @@
 {% endif %}
 <script type="text/javascript">
 //<![CDATA[
-    initTinyMCE({{ tinymce_config|raw }});
+    var ajax_initTinyMCE = function (){
+        initTinyMCE({{ tinymce_config|raw }});
+    }
+    ajax_initTinyMCE();
 //]]>
 </script>
